@@ -178,11 +178,6 @@ function convertText() {
   if (value != "") {
     output_str.value = old_arabic_script(input_str.value);
     document.getElementById("saved").innerHTML = "";
-
-    // send To From
-    getIP()
-      .then((data) => sendToFrom(data, value))
-      .catch((e) => console.log("error:", e));
   } else {
     output_str.value = "";
   }
